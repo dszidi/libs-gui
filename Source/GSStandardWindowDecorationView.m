@@ -127,8 +127,7 @@
         miniaturizeButtonRect = NSZeroRect;
     }
 
-  // Enable zoom (maximize) button when decorator style is set to NSMacintoshInterfaceStyle
-  NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+  // Enable zoom (maximize) button when decorator style is set to NSMacintoshInterfaceStyle 
   if ([defs objectForKey: @"GSWindowDecoratorStyle"] == NSMacintoshInterfaceStyle ||
       [defs objectForKey: @"NSInterfaceStyleDefault"] == NSMacintoshInterfaceStyle)
   {  

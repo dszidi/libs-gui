@@ -122,6 +122,7 @@ APPKIT_EXPORT_CLASS
   NSRect resizeBarRect;
   NSRect closeButtonRect;
   NSRect miniaturizeButtonRect;
+  NSRect zoomButtonRect;
 
   NSButton *closeButton, *miniaturizeButton;
 }
