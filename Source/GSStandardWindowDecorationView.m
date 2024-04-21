@@ -94,6 +94,7 @@
 - (void) updateRects
 {
   GSTheme *theme = [GSTheme theme];
+  NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
 
   if (hasTitleBar)
     {
@@ -126,6 +127,18 @@
         miniaturizeButtonRect = NSZeroRect;
     }
 
+  // Enable zoom (maximize) button when decorator style is set to NSMacintoshInterfaceStyle
+  NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+  if ([defs objectForKey: @"GSWindowDecoratorStyle"] == NSMacintoshInterfaceStyle ||
+      [defs objectForKey: @"NSInterfaceStyleDefault"] == NSMacintoshInterfaceStyle)
+  {  
+    NSRect zoomButtonFrame = [[GSTheme theme] zoomButtonFrameForBounds: [self bounds]];
+    [zoomButton setFrame: zoomButtonFrame];    
+  }
+  else
+  {
+      zoomButtonRect = NSZeroRect;
+  } 
 }
 
 - (id) initWithFrame: (NSRect)frame

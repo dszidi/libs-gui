@@ -2105,6 +2105,11 @@ static NSDictionary *titleTextAttributes[3] = {nil, nil, nil};
 		    [theme titlebarButtonSize]);
 }
 
+- (NSRect) zoomButtonFrameForBounds: (NSRect)bounds
+{
+  // Do nothing by default. Custom themes should override this method.
+}
+
 - (NSColor *) browserHeaderTextColor
 {
   NSColor *color;

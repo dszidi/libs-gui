@@ -1253,6 +1253,8 @@ APPKIT_EXPORT_CLASS
 
 - (NSRect) closeButtonFrameForBounds: (NSRect)bounds;
 
+- (NSRect) zoomButtonFrameForBounds: (NSRect)bounds;
+
 - (NSColor *) browserHeaderTextColor;
 
 - (void) drawBrowserHeaderCell: (NSTableHeaderCell*)cell
